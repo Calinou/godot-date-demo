@@ -9,6 +9,8 @@ onready var container := $VBoxContainer as Container
 
 func _ready():
 	var date := Date.new("2017-06-15T21:15:00Z")
+	add_label("Instantiation from UNIX timestamp")
+	add_label(Date.new(3600).format())
 	add_label("LDML (localized) formats")
 	add_label(date.format())
 	add_label(date.format("LT"))
