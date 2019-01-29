@@ -8,6 +8,8 @@ const Date := preload("res://addons/godot_date/date.gd")
 onready var container := $VBoxContainer as Container
 
 func _ready():
+	add_label("Current date")
+	add_label(Date.new().format())
 	var date := Date.new("2017-06-15T21:15:00Z")
 	add_label("Instantiation from UNIX timestamp")
 	add_label(Date.new(3600).format())
